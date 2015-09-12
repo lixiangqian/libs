@@ -1,610 +1,94 @@
-/* --------------------------------------------- */
-/* Author: http://codecanyon.net/user/CodingJack */
-/* --------------------------------------------- */
-
-
-/* ********* */
-/* CSS RESET */
-/* ********* */
-.cj-music-bars,
-.cj-music-bars div,
-.cj-music-bars span {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    position: static;
-    line-height: normal;
-    background: transparent;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    vertical-align: baseline;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    transition: none;
-    -webkit-transform: none;
-    -moz-transform: none;
-    -o-transform: none;
-    -ms-transform: none;
-    transform: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/*!
+ *  Font Awesome 4.0.1
+ *  the iconic font designed for Bootstrap
+ *  ------------------------------------------------------------------------------
+ *  The full suite of pictographic icons, examples, and documentation can be
+ *  found at http://fontawesome.io.  Stay up to date on Twitter at
+ *  http://twitter.com/fontawesome.
+ *
+ *  License
+ *  ------------------------------------------------------------------------------
+ *  - The Font Awesome font is licensed under SIL OFL 1.1 -
+ *    http://scripts.sil.org/OFL
+ *  - Font Awesome CSS, LESS, and SASS files are licensed under MIT License -
+ *    http://opensource.org/licenses/mit-license.html
+ *  - Font Awesome documentation licensed under CC BY 3.0 -
+ *    http://creativecommons.org/licenses/by/3.0/
+ *  - Attribution is no longer required in Font Awesome 3.0, but much appreciated:
+ *    "Font Awesome by Dave Gandy - http://fontawesome.io"
+ *
+ *  Author - Dave Gandy
+ *  ------------------------------------------------------------------------------
+ *  Email: dave@fontawesome.io
+ *  Twitter: http://twitter.com/davegandy
+ *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+    font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.1');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.cj-music-bars div {
-    display: block;
-}
-
-.cj-music-bars span {
-    display: inline;
-}
-
-/* *************** */
-/* SONG TITLE FONT */
-/* *************** */
-
-/* song title font */
-.cj-music-bars .cj-music-box.cj-music-title {
-    font: 10px 'Oxygen', sans-serif;
-}
-
-/* ********************************************************** */
-/*                       COLOR SCHEME 1                       */
-/* ********************************************************** */
-
-/* music bars color */
-.cj-music-bars.cj-color-scheme-1 .cj-single-bar {
-    background-color: #FFF;
-}
-
-/* alternative music icon color */
-.cj-music-bars.cj-color-scheme-1 .cj-static-icon {
-    color: #FFF;
-    font-size: 16px;
-}
-
-/* background color of hover bubble */
-.cj-music-bars.cj-color-scheme-1 .cj-music-meta {
-    background-color: #FFF;
-}
-
-/* hover bubble arrow color */
-.cj-music-bars.cj-color-scheme-1 .cj-music-meta:before {
-    border: 7px solid #FFF;
-}
-
-/* hover bubble title/nav boxes */
-.cj-music-bars.cj-color-scheme-1 .cj-music-box {
-    color: #DDD;
-    border: 1px solid #222;
-    background: #333;
-    background: -moz-linear-gradient(top, #333 0%, #222 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #222));
-    background: -webkit-linear-gradient(top, #333 0%, #222 100%);
-    background: -o-linear-gradient(top, #333 0%, #222 100%);
-    background: linear-gradient(to bottom, #333 0%, #222 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-}
-
-/* hover bubble title/nav boxes mouse over */
-.cj-music-bars.cj-color-scheme-1 .cj-music-nav .cj-music-box:hover,
-.cj-music-bars.cj-color-scheme-1 .cj-title-link:hover {
-    color: #FFF;
-    border: 1px solid #333;
-    background: #444;
-    background: -moz-linear-gradient(top, #444 0%, #333 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #444), color-stop(100%, #333));
-    background: -webkit-linear-gradient(top, #444 0%, #333 100%);
-    background: -o-linear-gradient(top, #444 0%, #333 100%);
-    background: linear-gradient(to bottom, #444 0%, #333 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#444444', endColorstr='#333333', GradientType=0);
-}
-
-/* pause icon color */
-.cj-music-bars.cj-color-scheme-1 .cj-music-pause:before,
-.cj-music-bars.cj-color-scheme-1 .cj-music-pause:after {
-    background-color: #DDD;
-}
-
-/* pause icon mouse over */
-.cj-music-bars.cj-color-scheme-1 .cj-music-nav .cj-music-box:hover .cj-music-pause:before,
-.cj-music-bars.cj-color-scheme-1 .cj-music-nav .cj-music-box:hover .cj-music-pause:after {
-    background-color: #FFF;
-}
-
-/* ********************************************************** */
-/*                       COLOR SCHEME 2                       */
-/* ********************************************************** */
-
-/* music bars color */
-.cj-music-bars.cj-color-scheme-2 .cj-single-bar {
-    background-color: #666;
-}
-
-/* alternative music icon color */
-.cj-music-bars.cj-color-scheme-2 .cj-static-icon {
-    color: #666;
-    font-size: 16px;
-}
-
-/* background color of hover bubble */
-.cj-music-bars.cj-color-scheme-2 .cj-music-meta {
-    background-color: #999;
-}
-
-/* hover bubble arrow color */
-.cj-music-bars.cj-color-scheme-2 .cj-music-meta:before {
-    border: 7px solid #999;
-}
-
-/* hover bubble title/nav boxes */
-.cj-music-bars.cj-color-scheme-2 .cj-music-box {
-    color: #CCC;
-    border: 1px solid #555;
-    background: #666;
-    background: -moz-linear-gradient(top, #666 0%, #555 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #666), color-stop(100%, #555));
-    background: -webkit-linear-gradient(top, #666 0%, #555 100%);
-    background: -o-linear-gradient(top, #666 0%, #555 100%);
-    background: linear-gradient(to bottom, #666 0%, #555 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666666', endColorstr='#555555', GradientType=0);
-}
-
-/* hover bubble title/nav boxes mouse over */
-.cj-music-bars.cj-color-scheme-2 .cj-music-nav .cj-music-box:hover,
-.cj-music-bars.cj-color-scheme-2 .cj-title-link:hover {
-    color: #FFF;
-    border: 1px solid #555;
-    border-top-color: #444;
-    background: #555;
-    background: -moz-linear-gradient(top, #555 0%, #666 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #555), color-stop(100%, #666));
-    background: -webkit-linear-gradient(top, #555 0%, #666 100%);
-    background: -o-linear-gradient(top, #555 0%, #666 100%);
-    background: linear-gradient(to bottom, #555 0%, #666 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#555555', endColorstr='#666666', GradientType=0);
-}
-
-/* pause icon color */
-.cj-music-bars.cj-color-scheme-2 .cj-music-pause:before,
-.cj-music-bars.cj-color-scheme-2 .cj-music-pause:after {
-    background-color: #CCC;
-}
-
-/* pause icon mouse over */
-.cj-music-bars.cj-color-scheme-2 .cj-music-nav .cj-music-box:hover .cj-music-pause:before,
-.cj-music-bars.cj-color-scheme-2 .cj-music-nav .cj-music-box:hover .cj-music-pause:after {
-    background-color: #FFF;
-}
-
-/* ********************************************************** */
-/*                       COLOR SCHEME 3                       */
-/* ********************************************************** */
-
-/* music bars color */
-.cj-music-bars.cj-color-scheme-3 .cj-single-bar {
-    background-color: #000;
-}
-
-/* alternative music icon color */
-.cj-music-bars.cj-color-scheme-3 .cj-static-icon {
-    color: #000;
-    font-size: 16px;
-}
-
-/* background color of hover bubble */
-.cj-music-bars.cj-color-scheme-3 .cj-music-meta {
-    background-color: #000;
-}
-
-/* hover bubble arrow color */
-.cj-music-bars.cj-color-scheme-3 .cj-music-meta:before {
-    border: 7px solid #000;
-}
-
-/* hover bubble title/nav boxes */
-.cj-music-bars.cj-color-scheme-3 .cj-music-box {
-    color: #BBB;
-    border: 1px solid #555;
-    background: #333;
-    background: -moz-linear-gradient(top, #333 0%, #222 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333), color-stop(100%, #222));
-    background: -webkit-linear-gradient(top, #333 0%, #222 100%);
-    background: -o-linear-gradient(top, #333 0%, #222 100%);
-    background: linear-gradient(to bottom, #333 0%, #222 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#222222', GradientType=0);
-}
-
-/* hover bubble title/nav boxes mouse over */
-.cj-music-bars.cj-color-scheme-3 .cj-music-nav .cj-music-box:hover,
-.cj-music-bars.cj-color-scheme-3 .cj-title-link:hover {
-    color: #EEE;
-    background: #222;
-    background: -moz-linear-gradient(top, #222 0%, #333 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #222), color-stop(100%, #333));
-    background: -webkit-linear-gradient(top, #222 0%, #333 100%);
-    background: -o-linear-gradient(top, #222 0%, #333 100%);
-    background: linear-gradient(to bottom, #222 0%, #333 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222222', endColorstr='#333333', GradientType=0);
-}
-
-/* pause icon color */
-.cj-music-bars.cj-color-scheme-3 .cj-music-pause:before,
-.cj-music-bars.cj-color-scheme-3 .cj-music-pause:after {
-    background-color: #BBB;
-}
-
-/* pause icon mouse over */
-.cj-music-bars.cj-color-scheme-3 .cj-music-nav .cj-music-box:hover .cj-music-pause:before,
-.cj-music-bars.cj-color-scheme-3 .cj-music-nav .cj-music-box:hover .cj-music-pause:after {
-    background-color: #EEE;
-}
-
-
-/* ***************** */
-/* SIZE AND POSITION */
-/* ***************** */
-
-/* top level div */
-.cj-music-bars {
-    display: inline;
-    position: relative;
-}
-
-/* music player position */
-.cj-music-position {
+.fa {
     display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+
+.fa-html5:before {
+    content: "\f13b";
 }
 
-/* playlist is hidden */
-.cj-music-bars ul {
-    display: none;
+.fa-css3:before {
+    content: "\f13c";
 }
 
-/* player hover bubble */
-.cj-music-bars .cj-music-meta {
-    width: 96px;
-    padding: 4px;
-    position: absolute;
-    visibility: hidden;
-    opacity: 0;
+.fa-apple:before {
+    content: "\f179";
 }
 
-/* hover bubble arrow */
-.cj-music-bars .cj-music-meta:before {
-    width: 0;
-    height: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    border-left-color: transparent !important;
-    border-right-color: transparent !important;
+.fa-windows:before {
+    content: "\f17a";
 }
 
-/* **************** */
-/* TOP ALIGN BUBBLE */
-/* **************** */
-.cj-music-bars .cj-music-meta.cj-align-top {
-    bottom: 28px;
+.fa-android:before {
+    content: "\f17b";
 }
 
-.cj-music-bars .cj-music-meta.cj-align-top:before {
-    bottom: -7px;
-    border-bottom: none;
+.fa-twitter:before {
+    content: "\f099";
 }
 
-/* ******************* */
-/* BOTTOM ALIGN BUBBLE */
-/* ******************* */
-.cj-music-bars .cj-music-meta.cj-align-bottom {
-    top: 28px;
+.fa-facebook:before {
+    content: "\f09a";
 }
 
-.cj-music-bars .cj-music-meta.cj-align-bottom:before {
-    top: -7px;
-    border-top: none;
+.fa-plus-square:before {
+    content: "\f0fe";
 }
 
-/* ***************** */
-/* LEFT ALIGN BUBBLE */
-/* ***************** */
-.cj-music-bars .cj-music-meta.cj-align-left {
-    left: -10px;
+.fa-chevron-left:before {
+    content: "\f053";
 }
 
-.cj-music-bars .cj-music-meta.cj-align-left:before {
-    left: 11px;
+.fa-chevron-right:before {
+    content: "\f054";
 }
 
-/* ******************* */
-/* CENTER ALIGN BUBBLE */
-/* ******************* */
-.cj-music-bars .cj-music-meta.cj-align-center {
-    left: -44px;
+.fa-caret-right:before {
+    content: "\f0da";
 }
 
-.cj-music-bars .cj-music-meta.cj-align-center:before {
-    left: 45px;
-}
-
-/* ****************** */
-/* RIGHT ALIGN BUBBLE */
-/* ****************** */
-.cj-music-bars .cj-music-meta.cj-align-right {
-    left: -79px;
-}
-
-.cj-music-bars .cj-music-meta.cj-align-right:before {
-    left: 80px;
-}
-
-/* transparent element used for better
-   hover accuracy between music bars and hover bubble */
-.cj-music-bars .cj-music-meta:after {
-    width: 100%;
-    height: 10px;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-}
-
-/* hover bubble fade in */
-.cj-music-bars .cj-meta-trans,
-.cj-music-bars .cj-music-meta:before {
-    -webkit-transition-property: opacity, visibility, left;
-    -moz-transition-property: opacity, visibility, left;
-    -o-transition-property: opacity, visibility, left;
-    transition-property: opacity, visibility, left;
-    -webkit-transition-duration: 0.6s;
-    -moz-transition-duration: 0.6s;
-    -o-transition-duration: 0.6s;
-    transition-duration: 0.6s;
-    -webkit-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -moz-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -o-transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    transition-timing-function: cubic-bezier(0.230, 1.000, 0.320, 1.000);
-}
-
-/* class that gets added on mouse over */
-.cj-music-bars .cj-visible-meta {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* hover bubble buttons/title boxes */
-.cj-music-bars .cj-music-box {
-    /* icon size */
-    font-size: 14px;
-    line-height: 14px;
-    -webkit-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -moz-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -o-transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    transition: all 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-}
-
-/* title wrapper */
-.cj-music-bars .cj-music-title {
-    display: block;
-    padding: 5px 0 5px 0;
-    white-space: nowrap;
-}
-
-/* title container */
-.cj-music-bars .cj-music-title div {
-    width: 90%;
-    overflow: hidden;
-    margin-left: 5%;
-}
-
-/* title content */
-.cj-music-bars .cj-music-title span {
-    display: inline-block;
-}
-
-/* gets added to title box if title is hyperlinked */
-.cj-music-bars .cj-title-link {
-    cursor: pointer;
-}
-
-/* title hyperlink */
-.cj-music-bars .cj-music-title a {
-    text-decoration: none;
-}
-
-/* player controls */
-.cj-music-bars .cj-music-nav {
-    margin-top: 3px;
-}
-
-/* class added when titles are not used */
-.cj-music-bars .cj-music-nav.cj-no-title {
-    margin-top: 0;
-}
-
-/* player control button boxes */
-.cj-music-bars .cj-music-nav .cj-music-box {
-    float: left;
-    width: 28px;
-    height: 25px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-}
-
-/* player control icons */
-.cj-music-bars .cj-music-nav i {
-    margin-top: 6px;
-}
-
-/* play/pause button */
-.cj-music-bars .cj-music-nav .cj-music-box.cj-music-playpause {
-    margin: 0 3px 0 3px;
-    position: relative;
-}
-
-/* class gets applied when only one song exists */
-.cj-music-bars .cj-music-nav .cj-music-box.cj-wide-button {
-    width: 94px;
-    margin: 0;
-}
-
-/* class gets applied when only one song exists */
-.cj-music-bars .cj-music-nav .cj-wide-button .cj-music-pause {
-    position: relative;
-    left: 50%;
-    margin-left: -13px;
-}
-
-/* class gets applied when only one song exists */
-.cj-music-bars .cj-music-nav .cj-music-box.cj-wide-nav {
-    width: 46px;
-    margin: 0;
-}
-
-/* play/pause button boxes */
-.cj-music-bars .cj-music-nav .cj-music-box.cj-music-playpause > span {
-    display: block;
-}
-
-/* play button box */
-.cj-music-bars .cj-music-play {
-    /* icon size */
-    font-size: 19px;
-    margin-left: 2px;
-}
-
-/* play icon */
-.cj-music-bars .cj-music-play i {
-    margin-top: 3px;
-}
-
-/* pause button icon */
-.cj-music-bars .cj-music-pause:before,
-.cj-music-bars .cj-music-pause:after {
-    position: absolute;
-    top: 7px;
-    content: "";
-    width: 4px;
-    height: 11px;
-    display: block;
-    -webkit-transition: background-color 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -moz-transition: background-color 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    -o-transition: background-color 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-    transition: background-color 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000);
-}
-
-/* pause button icon */
-.cj-music-bars .cj-music-pause:before {
-    left: 9px;
-}
-
-/* pause button icon */
-.cj-music-bars .cj-music-pause:after {
-    left: 15px;
-}
-
-/* prev/next song icons */
-.cj-music-bars .cj-music-prevsong i {
-    margin-right: 1px;
-}
-
-/* fixes alignment issue in firefox (small FontAwesome variance)  */
-.cj-music-bars.cj-ff-fix .cj-music-prevsong i {
-    margin-right: 0;
-}
-
-/* fixes alignment issue in firefox (small FontAwesome variance)  */
-.cj-music-bars.cj-ff-fix .cj-music-nextsong i {
-    margin-right: 0;
-    margin-left: 1px;
-}
-
-/* music bars container */
-.cj-music-bars .cj-bars {
-    cursor: pointer;
-    display: inline-block;
-    visibility: hidden;
-}
-
-/* static icon hidden unless used */
-.cj-music-bars .cj-static-icon {
-    display: none;
-}
-
-/* temporary element used to retrieve proper title width */
-.cj-music-bars .cj-temp-title {
-    position: absolute;
-}
-
-/* music bars container */
-.cj-music-bars .cj-rotate-bars {
-    height: 16px;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto expand', M11=-1, M12=-1.2246467991473532e-16, M21=1.2246467991473532e-16, M22=-1)";
-}
-
-/* improves mouse hover accuracy on legacy IE */
-.cj-music-bars .cj-rotate-bars:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 16px;
-    content: "";
-}
-
-/* individual music bars */
-.cj-music-bars .cj-single-bar {
-    width: 3px;
-    height: 3px;
-    float: left;
-    margin-right: 1px;
-    display: inline-block;
-}
-
-/* IE8 Fallback, 4th bar */
-.cj-music-bars .cj-static-bars .cj-single-bar {
-    height: 12px;
-}
-
-/* IE8 Fallback 3rd bar*/
-.cj-music-bars .cj-static-bars .cj-single-bar + span {
-    height: 9px;
-}
-
-/* IE8 Fallback 2nd bar */
-.cj-music-bars .cj-static-bars .cj-single-bar + span + span {
-    height: 6px;
-}
-
-/* IE8 Fallback 1st bar */
-.cj-music-bars .cj-static-bars .cj-single-bar + span + span + span {
-    height: 3px;
-}
-
-/* audio object */
-.cj-music-bars .cj-music-object,
-.cj-music-bars audio {
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-/* temporary class that allows us to test for CSS3 animation support */
-.cj-music-bars .cj-animation-test {
-    display: none;
-    -webkit-animation: cj-rotator 1s linear infinite;
-    -moz-animation: cj-rotator 1s linear infinite;
-    -o-animation: cj-rotator 1s linear infinite;
-    animation: cj-rotator 1s linear infinite;
+.fa-music:before {
+    content: "\f001";
 }
